@@ -27,3 +27,18 @@ CREATE TABLE IF NOT EXISTS stories(
     REFERENCES users(id)
     ON UPDATE CASCADE ON DELETE CASCADE 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Create tables
+CREATE TABLE IF NOT EXISTS company (
+    id INT AUTO_INCREMENT NOT NULL UNIQUE,
+    name VARCHAR(255) NOT NULL UNIQUE,
+    description TEXT,
+    location VARCHAR(255),
+    website VARCHAR(255),
+    logo VARCHAR(255),
+    industry VARCHAR(255),
+    established DATE,
+    other_details TEXT,
+
+    PRIMARY KEY (id)
+);
