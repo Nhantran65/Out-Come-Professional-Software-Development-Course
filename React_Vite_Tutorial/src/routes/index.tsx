@@ -50,12 +50,6 @@ const Router = () => {
                     element: <Blog />,
                 },
                 
-
-                {
-                    path: `${PATH_MAIN.BLOG}/:story_id`,
-                    element: <BlogDetails />,
-                },
-                
             ],
         },
         // Other
@@ -80,8 +74,6 @@ const SignUp = Loadable(lazy(() => import('@/pages/auth/SignUp')));
 const Home = Loadable(lazy(() => import('@/pages/main/Home')));
 
 const Blog = Loadable(lazy(() => import('@/pages/main/Blog')));
-
-const BlogDetails = Loadable(lazy(() => import('@/pages/main/BlogDetails')));
 
 // Other
 const NotFound = Loadable(lazy(() => import('@/pages/NotFound')));
